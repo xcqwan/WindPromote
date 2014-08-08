@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A83F982560E24D14873D6AAE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FECF94450546E69DD64282 /* libPods.a */; };
 		E085393019934D0E00601AA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085392F19934D0E00601AA7 /* Foundation.framework */; };
 		E085393219934D0E00601AA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085393119934D0E00601AA7 /* CoreGraphics.framework */; };
 		E085393419934D0E00601AA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085393319934D0E00601AA7 /* UIKit.framework */; };
@@ -14,13 +15,33 @@
 		E085393C19934D0E00601AA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E085393B19934D0E00601AA7 /* main.m */; };
 		E085394019934D0E00601AA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E085393F19934D0E00601AA7 /* AppDelegate.m */; };
 		E085394319934D0E00601AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E085394119934D0E00601AA7 /* Main.storyboard */; };
-		E085394619934D0E00601AA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085394519934D0E00601AA7 /* ViewController.m */; };
 		E085394819934D0E00601AA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E085394719934D0E00601AA7 /* Images.xcassets */; };
 		E085394F19934D0E00601AA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085394E19934D0E00601AA7 /* XCTest.framework */; };
 		E085395019934D0E00601AA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085392F19934D0E00601AA7 /* Foundation.framework */; };
 		E085395119934D0E00601AA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E085393319934D0E00601AA7 /* UIKit.framework */; };
 		E085395919934D0E00601AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E085395719934D0E00601AA7 /* InfoPlist.strings */; };
 		E085395B19934D0E00601AA7 /* WindPromoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E085395A19934D0E00601AA7 /* WindPromoteTests.m */; };
+		E085396F1993501100601AA7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E08539651993501100601AA7 /* back.png */; };
+		E08539701993501100601AA7 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E08539661993501100601AA7 /* close@2x.png */; };
+		E08539711993501100601AA7 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E08539671993501100601AA7 /* cross@2x.png */; };
+		E08539721993501100601AA7 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E08539681993501100601AA7 /* default@2x.png */; };
+		E08539731993501100601AA7 /* head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E08539691993501100601AA7 /* head@2x.png */; };
+		E08539741993501100601AA7 /* iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E085396A1993501100601AA7 /* iphone@2x.png */; };
+		E08539751993501100601AA7 /* mrwind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E085396B1993501100601AA7 /* mrwind@2x.png */; };
+		E08539761993501100601AA7 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E085396C1993501100601AA7 /* password@2x.png */; };
+		E08539771993501100601AA7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = E085396D1993501100601AA7 /* red.png */; };
+		E08539781993501100601AA7 /* takephoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E085396E1993501100601AA7 /* takephoto@2x.png */; };
+		E08539871993568600601AA7 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08539841993568600601AA7 /* BaseController.m */; };
+		E08539881993568600601AA7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08539861993568600601AA7 /* LoginController.m */; };
+		E085398B1993601A00601AA7 /* LoginCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085398A1993601A00601AA7 /* LoginCodeController.m */; };
+		E085398E1993708900601AA7 /* SupplementController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085398D1993708900601AA7 /* SupplementController.m */; };
+		E0853991199379DB00601AA7 /* PromoteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0853990199379DB00601AA7 /* PromoteListController.m */; };
+		E08539941993844900601AA7 /* PromoteHintController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08539931993844900601AA7 /* PromoteHintController.m */; };
+		E08539971993845E00601AA7 /* PromoteFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08539961993845E00601AA7 /* PromoteFormController.m */; };
+		E0960888199464AC00B398D1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E0960887199464AC00B398D1 /* Podfile */; };
+		E096088E19949ECF00B398D1 /* PromoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E096088C19949ECF00B398D1 /* PromoteCell.m */; };
+		E096088F19949ECF00B398D1 /* PromoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E096088D19949ECF00B398D1 /* PromoteCell.xib */; };
+		E09608931994A3B600B398D1 /* order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E09608921994A3B600B398D1 /* order@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D69AE1C55BAE41B0964D6147 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E085392C19934D0E00601AA7 /* WindPromote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindPromote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E085392F19934D0E00601AA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E085393119934D0E00601AA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +67,43 @@
 		E085393E19934D0E00601AA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E085393F19934D0E00601AA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E085394219934D0E00601AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E085394419934D0E00601AA7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E085394519934D0E00601AA7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E085394719934D0E00601AA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E085394D19934D0E00601AA7 /* WindPromoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindPromoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E085394E19934D0E00601AA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E085395619934D0E00601AA7 /* WindPromoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WindPromoteTests-Info.plist"; sourceTree = "<group>"; };
 		E085395819934D0E00601AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E085395A19934D0E00601AA7 /* WindPromoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindPromoteTests.m; sourceTree = "<group>"; };
+		E08539651993501100601AA7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		E08539661993501100601AA7 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		E08539671993501100601AA7 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		E08539681993501100601AA7 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		E08539691993501100601AA7 /* head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head@2x.png"; sourceTree = "<group>"; };
+		E085396A1993501100601AA7 /* iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone@2x.png"; sourceTree = "<group>"; };
+		E085396B1993501100601AA7 /* mrwind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mrwind@2x.png"; sourceTree = "<group>"; };
+		E085396C1993501100601AA7 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
+		E085396D1993501100601AA7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		E085396E1993501100601AA7 /* takephoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takephoto@2x.png"; sourceTree = "<group>"; };
+		E08539831993568600601AA7 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		E08539841993568600601AA7 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
+		E08539851993568600601AA7 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		E08539861993568600601AA7 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		E08539891993601A00601AA7 /* LoginCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCodeController.h; sourceTree = "<group>"; };
+		E085398A1993601A00601AA7 /* LoginCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCodeController.m; sourceTree = "<group>"; };
+		E085398C1993708900601AA7 /* SupplementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplementController.h; sourceTree = "<group>"; };
+		E085398D1993708900601AA7 /* SupplementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplementController.m; sourceTree = "<group>"; };
+		E085398F199379DB00601AA7 /* PromoteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromoteListController.h; sourceTree = "<group>"; };
+		E0853990199379DB00601AA7 /* PromoteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromoteListController.m; sourceTree = "<group>"; };
+		E08539921993844900601AA7 /* PromoteHintController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromoteHintController.h; sourceTree = "<group>"; };
+		E08539931993844900601AA7 /* PromoteHintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromoteHintController.m; sourceTree = "<group>"; };
+		E08539951993845E00601AA7 /* PromoteFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromoteFormController.h; sourceTree = "<group>"; };
+		E08539961993845E00601AA7 /* PromoteFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromoteFormController.m; sourceTree = "<group>"; };
+		E0960887199464AC00B398D1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E09608891994683200B398D1 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E096088B19949ECF00B398D1 /* PromoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromoteCell.h; sourceTree = "<group>"; };
+		E096088C19949ECF00B398D1 /* PromoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromoteCell.m; sourceTree = "<group>"; };
+		E096088D19949ECF00B398D1 /* PromoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoteCell.xib; sourceTree = "<group>"; };
+		E09608921994A3B600B398D1 /* order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order@2x.png"; sourceTree = "<group>"; };
+		F6FECF94450546E69DD64282 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +114,7 @@
 				E085393219934D0E00601AA7 /* CoreGraphics.framework in Frameworks */,
 				E085393419934D0E00601AA7 /* UIKit.framework in Frameworks */,
 				E085393019934D0E00601AA7 /* Foundation.framework in Frameworks */,
+				A83F982560E24D14873D6AAE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +134,12 @@
 		E085392319934D0E00601AA7 = {
 			isa = PBXGroup;
 			children = (
+				E0960887199464AC00B398D1 /* Podfile */,
 				E085393519934D0E00601AA7 /* WindPromote */,
 				E085395419934D0E00601AA7 /* WindPromoteTests */,
 				E085392E19934D0E00601AA7 /* Frameworks */,
 				E085392D19934D0E00601AA7 /* Products */,
+				D69AE1C55BAE41B0964D6147 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +159,7 @@
 				E085393119934D0E00601AA7 /* CoreGraphics.framework */,
 				E085393319934D0E00601AA7 /* UIKit.framework */,
 				E085394E19934D0E00601AA7 /* XCTest.framework */,
+				F6FECF94450546E69DD64282 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,12 +167,14 @@
 		E085393519934D0E00601AA7 /* WindPromote */ = {
 			isa = PBXGroup;
 			children = (
+				E096088A19949E5300B398D1 /* views */,
+				E085397B1993542400601AA7 /* controllers */,
+				E09608891994683200B398D1 /* Constant.h */,
 				E085393E19934D0E00601AA7 /* AppDelegate.h */,
 				E085393F19934D0E00601AA7 /* AppDelegate.m */,
 				E085394119934D0E00601AA7 /* Main.storyboard */,
-				E085394419934D0E00601AA7 /* ViewController.h */,
-				E085394519934D0E00601AA7 /* ViewController.m */,
 				E085394719934D0E00601AA7 /* Images.xcassets */,
+				E08539641993501100601AA7 /* image */,
 				E085393619934D0E00601AA7 /* Supporting Files */,
 			);
 			path = WindPromote;
@@ -152,6 +209,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E08539641993501100601AA7 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				E09608921994A3B600B398D1 /* order@2x.png */,
+				E08539651993501100601AA7 /* back.png */,
+				E08539661993501100601AA7 /* close@2x.png */,
+				E08539671993501100601AA7 /* cross@2x.png */,
+				E08539681993501100601AA7 /* default@2x.png */,
+				E08539691993501100601AA7 /* head@2x.png */,
+				E085396A1993501100601AA7 /* iphone@2x.png */,
+				E085396B1993501100601AA7 /* mrwind@2x.png */,
+				E085396C1993501100601AA7 /* password@2x.png */,
+				E085396D1993501100601AA7 /* red.png */,
+				E085396E1993501100601AA7 /* takephoto@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		E085397B1993542400601AA7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E08539831993568600601AA7 /* BaseController.h */,
+				E08539841993568600601AA7 /* BaseController.m */,
+				E08539851993568600601AA7 /* LoginController.h */,
+				E08539861993568600601AA7 /* LoginController.m */,
+				E08539891993601A00601AA7 /* LoginCodeController.h */,
+				E085398A1993601A00601AA7 /* LoginCodeController.m */,
+				E085398C1993708900601AA7 /* SupplementController.h */,
+				E085398D1993708900601AA7 /* SupplementController.m */,
+				E085398F199379DB00601AA7 /* PromoteListController.h */,
+				E0853990199379DB00601AA7 /* PromoteListController.m */,
+				E08539921993844900601AA7 /* PromoteHintController.h */,
+				E08539931993844900601AA7 /* PromoteHintController.m */,
+				E08539951993845E00601AA7 /* PromoteFormController.h */,
+				E08539961993845E00601AA7 /* PromoteFormController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		E096088A19949E5300B398D1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E096088B19949ECF00B398D1 /* PromoteCell.h */,
+				E096088C19949ECF00B398D1 /* PromoteCell.m */,
+				E096088D19949ECF00B398D1 /* PromoteCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E085395E19934D0E00601AA7 /* Build configuration list for PBXNativeTarget "WindPromote" */;
 			buildPhases = (
+				602495D9D7FD4FBFAF240000 /* Check Pods Manifest.lock */,
 				E085392819934D0E00601AA7 /* Sources */,
 				E085392919934D0E00601AA7 /* Frameworks */,
 				E085392A19934D0E00601AA7 /* Resources */,
+				11D50AF67659462C8CE437FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,9 +336,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08539701993501100601AA7 /* close@2x.png in Resources */,
+				E08539761993501100601AA7 /* password@2x.png in Resources */,
+				E085396F1993501100601AA7 /* back.png in Resources */,
+				E08539731993501100601AA7 /* head@2x.png in Resources */,
 				E085394819934D0E00601AA7 /* Images.xcassets in Resources */,
+				E09608931994A3B600B398D1 /* order@2x.png in Resources */,
+				E08539781993501100601AA7 /* takephoto@2x.png in Resources */,
 				E085393A19934D0E00601AA7 /* InfoPlist.strings in Resources */,
+				E08539741993501100601AA7 /* iphone@2x.png in Resources */,
 				E085394319934D0E00601AA7 /* Main.storyboard in Resources */,
+				E08539751993501100601AA7 /* mrwind@2x.png in Resources */,
+				E08539771993501100601AA7 /* red.png in Resources */,
+				E08539711993501100601AA7 /* cross@2x.png in Resources */,
+				E0960888199464AC00B398D1 /* Podfile in Resources */,
+				E096088F19949ECF00B398D1 /* PromoteCell.xib in Resources */,
+				E08539721993501100601AA7 /* default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +365,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11D50AF67659462C8CE437FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		602495D9D7FD4FBFAF240000 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E085392819934D0E00601AA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E085394619934D0E00601AA7 /* ViewController.m in Sources */,
+				E096088E19949ECF00B398D1 /* PromoteCell.m in Sources */,
+				E08539971993845E00601AA7 /* PromoteFormController.m in Sources */,
+				E085398E1993708900601AA7 /* SupplementController.m in Sources */,
+				E0853991199379DB00601AA7 /* PromoteListController.m in Sources */,
+				E08539881993568600601AA7 /* LoginController.m in Sources */,
+				E085398B1993601A00601AA7 /* LoginCodeController.m in Sources */,
 				E085394019934D0E00601AA7 /* AppDelegate.m in Sources */,
 				E085393C19934D0E00601AA7 /* main.m in Sources */,
+				E08539871993568600601AA7 /* BaseController.m in Sources */,
+				E08539941993844900601AA7 /* PromoteHintController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +534,7 @@
 		};
 		E085395F19934D0E00601AA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69AE1C55BAE41B0964D6147 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +548,7 @@
 		};
 		E085396019934D0E00601AA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69AE1C55BAE41B0964D6147 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +619,7 @@
 				E085396019934D0E00601AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E085396119934D0E00601AA7 /* Build configuration list for PBXNativeTarget "WindPromoteTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +628,7 @@
 				E085396319934D0E00601AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
