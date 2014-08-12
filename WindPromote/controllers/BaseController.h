@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AFNetworking.h>
+#import <RZSquaresLoading.h>
 #import "Constant.h"
 
 @interface BaseController : UIViewController
@@ -15,4 +16,5 @@
 - (id)makeRequestManager;
 - (void)showAlertView:(NSString *)message;
 - (void)navigationBack;
+- (void)showLoadingView:(BOOL)isShow;
 @end

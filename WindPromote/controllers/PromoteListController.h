@@ -8,6 +8,7 @@
 
 #import "BaseController.h"
 #import "PromoteCell.h"
+#import "MJRefresh.h"
 
 @interface PromoteListController : BaseController<UITableViewDelegate, UITableViewDataSource>
 

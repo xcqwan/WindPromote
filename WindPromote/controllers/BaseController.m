@@ -10,6 +10,8 @@
 
 @interface BaseController ()
 
+@property RZSquaresLoading *squareLoading;
+
 @end
 
 @implementation BaseController
@@ -44,6 +46,11 @@
     [alert show];
 }
 
+- (void)showLoadingView:(BOOL)isShow
+{
+    _squareLoading.hidden = !isShow;
+}
+
 - (void)navigationBack
 {
     [[self navigationController] popViewControllerAnimated:true];
@@ -53,6 +60,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _squareLoading = [[RZSquaresLoading alloc] initWithFrame:CGRectMake(140, 264, 40, 40)];
+    _squareLoading.hidden = true;
+    _squareLoading.color = [UIColor redColor];
+    [[self view] addSubview:_squareLoading];
 }
 
 - (void)didReceiveMemoryWarning

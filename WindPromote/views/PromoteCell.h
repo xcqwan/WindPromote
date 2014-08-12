@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *orderNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderNumTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *createdLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *startImageView;
 
 @end

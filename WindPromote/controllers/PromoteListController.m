@@ -10,6 +10,8 @@
 
 @interface PromoteListController ()
 
+@property int page;
+
 @property (weak, nonatomic) IBOutlet UILabel *userInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *promoteCountLabel;
 @property (weak, nonatomic) IBOutlet UITableView *promoteListTableView;
@@ -40,26 +42,45 @@
     [[self navigationController] pushViewController:promoteForm animated:true];
 }
 
-- (void)requestData
+- (void)headRefresh
+{
+    self.page = 1;
+    [self requestData:[NSString stringWithFormat:@"%d", self.page]];
+}
+
+- (void)footerLoad
+{
+    self.page++;
+    [self requestData:[NSString stringWithFormat:@"%d", self.page]];
+}
+
+- (void)requestData:(NSString *)page
 {
     AFHTTPRequestOperationManager *manager = [super makeRequestManager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    [params setObject:@"1" forKey:@"page"];
+    [params setObject:page forKey:@"page"];
     [params setObject:CS_PAGE_COUNT forKey:@"count"];
     
     [manager GET:[NSString stringWithFormat:@"%@%@", URL_BASE, URL_SHOP] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSInteger statusCode = operation.response.statusCode;
         if (statusCode == 200) {
+            if ([page intValue] == 1) {
+                [dataArray removeAllObjects];
+            }
             for (id item in responseObject) {
                 [dataArray addObject:item];
             }
             [[self promoteListTableView] reloadData];
         } else {
-            [super showAlertView:[NSString stringWithFormat:@"拉取数据失败, 失败码: %ld", statusCode]];
+            [super showAlertView:[NSString stringWithFormat:@"拉取数据失败, 失败码: %d", statusCode]];
         }
+        [[self promoteListTableView] headerEndRefreshing];
+        [[self promoteListTableView] footerEndRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [[self promoteListTableView] headerEndRefreshing];
+        [[self promoteListTableView] footerEndRefreshing];
         NSInteger statusCode = operation.response.statusCode;
-        [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %ld", statusCode]];
+        [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %d", statusCode]];
     }];
 }
 
@@ -88,7 +109,10 @@
     [self promoteListTableView].separatorStyle = UITableViewCellSeparatorStyleNone;
     [[self promoteListTableView] registerNib:[UINib nibWithNibName:@"PromoteCell" bundle:nil] forCellReuseIdentifier:@"promotecell"];
     
-    [self requestData];
+    [[self promoteListTableView] addHeaderWithTarget:self action:@selector(headRefresh)];
+    [[self promoteListTableView] addFooterWithTarget:self action:@selector(footerLoad)];
+    
+    [[self promoteListTableView] headerBeginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning

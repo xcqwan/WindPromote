@@ -19,8 +19,10 @@
     NSString *name = [_data valueForKey:@"name"];
     NSNumber *num = [_data valueForKey:@"daily_order_num"];
     NSString *hasOrder = [_data valueForKey:@"is_taken_out"];
+    NSString *interested = [_data valueForKey:@"interested"];
     
     _phoneLabel.text = phone;
+    NSLog(@"%@", _data);
     if ([name isEqual:[[NSNull alloc] init]]) {
         name = @"";
     }
@@ -44,7 +46,21 @@
         _orderFlagImageView.hidden = false;
         _orderNumLabel.hidden = false;
         _orderNumTextLabel.hidden = false;
-        _orderNumLabel.text = [num stringValue];
+        _orderNumLabel.text = [NSString stringWithFormat:@"%@", num];
+    }
+    
+    if (interested.boolValue) {
+        //感兴趣
+        _startImageView.hidden = false;
+        CGRect frame = _titleLabel.frame;
+        frame.origin.x = 40;
+        _titleLabel.frame = frame;
+    } else {
+        //不感兴趣
+        _startImageView.hidden = true;
+        CGRect frame = _titleLabel.frame;
+        frame.origin.x = 20;
+        _titleLabel.frame = frame;
     }
 }
 

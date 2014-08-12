@@ -32,21 +32,24 @@
     [params setObject:_tel forKey:@"tel"];
     [params setObject:code forKey:@"login_code"];
     
+    [super showLoadingView:true];
     [manager POST:[NSString stringWithFormat:@"%@%@", URL_BASE, URL_LOGIN] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [super showLoadingView:false];
         NSInteger statusCode = operation.response.statusCode;
         if (statusCode == 201) {
             NSString *token = [responseObject objectForKey:@"token"];
             NSString *userID = [responseObject objectForKey:@"id"];
             [self getUserProfile:token userID:userID];
         } else {
-            [super showAlertView:[NSString stringWithFormat:@"验证失败, 错误码: %ld", statusCode]];
+            [super showAlertView:[NSString stringWithFormat:@"验证失败, 错误码: %d", statusCode]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [super showLoadingView:false];
         NSInteger statusCode = operation.response.statusCode;
         if (statusCode == 422) {
             [super showAlertView:@"验证码错误, 请重新输入"];
         } else {
-            [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %ld", statusCode]];
+            [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %d", statusCode]];
         }
     }];
 }
@@ -59,7 +62,9 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     [params setObject:_tel forKey:@"tel"];
     
+    [super showLoadingView:true];
     [manager POST:[NSString stringWithFormat:@"%@%@", URL_BASE, URL_SENDCODE] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [super showLoadingView:false];
         NSInteger statusCode = operation.response.statusCode;
         if (statusCode == 204) {
             [super showAlertView:@"验证码发送成功"];
@@ -68,6 +73,7 @@
             [super showAlertView:@"验证码发送失败"];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [super showLoadingView:false];
         [super showAlertView:@"网络错误"];
     }];
 }
@@ -116,7 +122,7 @@
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[self resendButton] setTitle:[NSString stringWithFormat:@"重新发送 (%ld秒)", timeout] forState:UIControlStateNormal];
+                [[self resendButton] setTitle:[NSString stringWithFormat:@"重新发送 (%d秒)", timeout] forState:UIControlStateNormal];
                 [self resendButton].backgroundColor = [UIColor grayColor];
                 [self resendButton].userInteractionEnabled = false;
             });

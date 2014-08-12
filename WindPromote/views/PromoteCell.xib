@@ -19,7 +19,7 @@
                         <color key="backgroundColor" red="0.92549026012420654" green="0.92549026012420654" blue="0.92549026012420654" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="肯德基" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYd-Ty-o4R">
-                        <rect key="frame" x="20" y="0.0" width="200" height="49"/>
+                        <rect key="frame" x="40" y="0.0" width="200" height="49"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.27058824896812439" green="0.27058824896812439" blue="0.27058824896812439" alpha="1" colorSpace="deviceRGB"/>
@@ -95,6 +95,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start.png" translatesAutoresizingMaskIntoConstraints="NO" id="xeV-8T-fUg">
+                        <rect key="frame" x="24" y="18" width="11" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -103,11 +107,13 @@
                 <outlet property="orderNumLabel" destination="o9Y-M2-833" id="662-nE-ohe"/>
                 <outlet property="orderNumTextLabel" destination="hFT-ok-8eJ" id="Qx9-xp-e01"/>
                 <outlet property="phoneLabel" destination="gbQ-IN-LyL" id="80M-bG-H0k"/>
+                <outlet property="startImageView" destination="xeV-8T-fUg" id="bhV-6g-hMZ"/>
                 <outlet property="titleLabel" destination="KYd-Ty-o4R" id="uWH-Qp-3oC"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="order.png" width="37" height="35"/>
+        <image name="start.png" width="12" height="14"/>
     </resources>
 </document>

@@ -7,7 +7,10 @@
 //
 
 #import "BaseController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface PromoteFormController : BaseController
+@interface PromoteFormController : BaseController<CLLocationManagerDelegate>
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end

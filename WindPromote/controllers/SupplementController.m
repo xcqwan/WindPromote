@@ -28,20 +28,23 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     [params setObject:name forKey:@"name"];
     
+    [super showLoadingView:true];
     NSString *userID = [[NSUserDefaults standardUserDefaults] stringForKey:UD_ID];
     [manager PATCH:[NSString stringWithFormat:@"%@%@%@", URL_BASE, URL_USER_PROFILE, userID] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [super showLoadingView:false];
         NSInteger statusCode = operation.response.statusCode;
         if (statusCode == 202) {
             [[NSUserDefaults standardUserDefaults] setValue:name forKey:UD_NAME];
             UIViewController * promoteList = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"promote_list"];
             [[self navigationController] pushViewController:promoteList animated:true];
         } else {
-            [super showAlertView:[NSString stringWithFormat:@"修改用户名失败, 失败码: %ld", statusCode]];
+            [super showAlertView:[NSString stringWithFormat:@"修改用户名失败, 失败码: %d", statusCode]];
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [super showLoadingView:false];
         NSInteger statusCode = operation.response.statusCode;
-        [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %ld", statusCode]];
+        [super showAlertView:[NSString stringWithFormat:@"网络错误, 错误码: %d", statusCode]];
     }];
 }
 
